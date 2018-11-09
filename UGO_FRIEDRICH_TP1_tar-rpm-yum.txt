@@ -1,0 +1,80 @@
+Ugo FRIEDRICH
+
+tar command:	.tar	<--- tar -cvf
+		.gzip	<--- tar -cvzf
+		.bzip2	<--- tar -cvjf
+
+
+File size:
+"du -h"
+52K = du -sh /tmp/gconf.tar
+8K = du -sh /tmp/gconf.tar.gzip
+8K = du -sh /tmp/gconf.tar.bzip2
+52k = du -sh /etc/gconf
+
+
+Uncompress file:
+"tar -xvf theFile -C /Path"
+
+
+Copie nuagique:
+cd /etc/; tar cf - gconf/ | (cd /tmp/restaure-cp-with-TAR/; tar xpf - gconf/)
+
+
+Package of file:
+"rpm -qif /path"
+
+
+Package version:
+"rpm -qi package_name"
+Tar est en verson 1.26
+
+
+Package group:
+"rpm -qi package_name"
+Setup appartient au gorupe System Environment/Base
+
+
+Check package dependencies:
+"rpm -q package_name --whatprovides"
+"rpm -q package_name --whatrequires"
+
+
+Check what comes with a package:
+"rpm -ql package_name"
+etc/shadow vient avec setup
+
+
+
+Package auto-update:
+"systemctl status packagekit"
+MàJ automatique activée	
+
+
+Package for CentOS:
+"yum list | grep "centos" | wc -l"
+Il y a 404 packages référencés.
+
+
+Packages currently installed:
+"yum list installed | wc -l"
+Il y a 1462 packages installés actuellement
+
+
+Package CentOS:
+"yum list | grep "centos"
+centos-packager.noarch <--- Disponible
+PackageKit.i686   <--- Mettre à jour
+PackageKit.x86_64 <--- Déjà installé
+
+
+MariaDB and Web Package:
+Mariadb ne fait pas partie du group package de serveur web de base
+
+
+
+
+
+
+
+
