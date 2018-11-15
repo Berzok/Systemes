@@ -93,7 +93,7 @@ char pressing_key()
 	char key = NO_KEY;
 	
 	init_keyboard();
-	sleep(DELAY_KEY_DETECTION);
+/*	sleep(DELAY_KEY_DETECTION);*/
 	
 	if( keyboard_hit() != NO_KEY )
 	{
