@@ -8,36 +8,18 @@
 
 int main(int argc, char *argv[]){
 
+	int i=1;
 	
-	int pesterchum[2];
-	pipe(pesterchum);
-	
-	char *cmd = malloc(sizeof(char));
-	
-	
-	int the_final_countdown = 0;
-	write(pesterchum[1], argv[0], sizeof(argv[0]));
-	
-	while(the_final_countdown<argc){
+	for(i=1; i<=argc; i++){	
+		system(argv[i]);
 		fork();
 		if(fork()==1){
-			read(pesterchum[0], cmd, sizeof(char));
-			system(cmd);
-			write(pesterchum[1], argv[the_final_countdown], sizeof(char));
+			system(commande);
+			continue;
 			}
-		if(fork()==0){
-			read(pesterchum[0], cmd, sizeof(char));
-			system(cmd);
-			}
-		the_final_countdown++;
+		else
+			break;
 		}
-	
-	
-	
-	
-	free(cmd);
-
-
 	return 0;
 	}
 	
