@@ -1,3 +1,14 @@
 FRIEDRICH Ugo
 
 
+Question 4.1:
+Les commandes à utiliser en shell sont "cat" et "grep"
+
+Question 4.2:
+echo "On va écrire lichi" | echo "lichi" > fichier.txt
+
+Question 4.4:
+open() renvoie le descripteur d'un fichier.
+read() récupère le contenu d'un fichier identifié par son descripteur et écrit ce contenu dans une variable
+write() écrit dans un fichier identifié par son descripteur le contenu d'une variable/d'un char
+close() ferme le flux du descripteur du fichier.
